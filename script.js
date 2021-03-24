@@ -20,17 +20,15 @@ var arrayCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 
 arrayCognomi.push(cognomeUtente);
 
-// console.log(arrayCognomi);
+console.log(arrayCognomi);
 
 // step 4 : stampa la lista dei cognomi ordinata alfabeticamente
 
+arrayCognomi.sort(); // ordina alfabeticamente i contenuti del mio array
 
 
 for(var i = 0; i < arrayCognomi.length; i++ ) {
     var cognome = arrayCognomi[i];
-
-    arrayCognomi.sort(); // ordina alfabeticamente i contenuti del mio array
-
 
     var contenutoAttualeOl = document.getElementById('lista-cognomi').innerHTML;
     document.getElementById('lista-cognomi').innerHTML = contenutoAttualeOl + '<li>' + cognome + '</li>';
@@ -38,7 +36,19 @@ for(var i = 0; i < arrayCognomi.length; i++ ) {
 
 // step 5 : scrivo la posizione in cui si trova il cognome dell'utente (FOR)
 
-for(i = 1 ; i < arrayCognomi.length ; i++ ) {
+var position = -1;
+
+for(var i = 0 ; i < arrayCognomi.length ; i++ ) {
     
-   
+    if( cognomeUtente == arrayCognomi[i] ) {
+      position = i;
+
+
+    }
+ 
+    var positionSurname = document.getElementById('position').innerHTML;
+    document.getElementById('position').innerHTML = "La tua posizione è : " + (position + 1); 
 }
+
+
+
