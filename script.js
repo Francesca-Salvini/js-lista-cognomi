@@ -12,11 +12,24 @@ var cognomeUtente = prompt("Dimmi il tuo cognome");
 // step 2 : credo un array con altri cognomi 
 
 var arrayCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"]; 
+
+
 // console.log(arrayCognomi);
 
 // step 3 : inserirsco il cognome dell'utente nell'array di cognomi
 
 arrayCognomi.push(cognomeUtente);
+
 // console.log(arrayCognomi);
 
+// step 4 : stampa la lista dei cognomi ordinata alfabeticamente
 
+for(var i = 0; i < arrayCognomi.length; i++ ) {
+    var cognome = arrayCognomi[i];
+
+    arrayCognomi.sort(); // ordina alfabeticamente i contenuti del mio array
+
+
+    var contenutoAttualeUl = document.getElementById('lista-cognomi').innerHTML;
+    document.getElementById('lista-cognomi').innerHTML = contenutoAttualeUl + '<li>' + cognome + '</li>';
+}
