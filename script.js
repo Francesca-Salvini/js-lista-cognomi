@@ -34,21 +34,37 @@ for(var i = 0; i < arrayCognomi.length; i++ ) {
     document.getElementById('lista-cognomi').innerHTML = contenutoAttualeOl + '<li>' + cognome + '</li>';
 }
 
-// step 5 : scrivo la posizione in cui si trova il cognome dell'utente (FOR)
+// step 5 : scrivo la posizione in cui si trova il cognome dell'utente (uso ciclo FOR)
+
+// var position = -1;
+
+// for(var i = 0 ; i < arrayCognomi.length ; i++ ) {
+    
+//     if( cognomeUtente == arrayCognomi[i] ) {
+//       position = i; }
+ 
+
+//     document.getElementById('position').innerHTML = "La tua posizione è : " + (position + 1); 
+
+
+// }
+
+// step 6 : scrivo la posizione in cui si trova il cognome dell'utente (uso ciclo WHILE)
 
 var position = -1;
+var i = 0; 
 
-for(var i = 0 ; i < arrayCognomi.length ; i++ ) {
-    
+while( i < arrayCognomi.length ) {
     if( cognomeUtente == arrayCognomi[i] ) {
-      position = i;
+        position = i;
 
-
+              
     }
- 
-    var positionSurname = document.getElementById('position').innerHTML;
-    document.getElementById('position').innerHTML = "La tua posizione è : " + (position + 1); 
+         
+    
+    document.getElementById('position').innerHTML = "La tua posizione è : " + (position + 1);
+
+
+   i++;
+    
 }
-
-
-
