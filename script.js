@@ -24,12 +24,21 @@ arrayCognomi.push(cognomeUtente);
 
 // step 4 : stampa la lista dei cognomi ordinata alfabeticamente
 
+
+
 for(var i = 0; i < arrayCognomi.length; i++ ) {
     var cognome = arrayCognomi[i];
 
     arrayCognomi.sort(); // ordina alfabeticamente i contenuti del mio array
 
 
-    var contenutoAttualeUl = document.getElementById('lista-cognomi').innerHTML;
-    document.getElementById('lista-cognomi').innerHTML = contenutoAttualeUl + '<li>' + cognome + '</li>';
+    var contenutoAttualeOl = document.getElementById('lista-cognomi').innerHTML;
+    document.getElementById('lista-cognomi').innerHTML = contenutoAttualeOl + '<li>' + cognome + '</li>';
+}
+
+// step 5 : scrivo la posizione in cui si trova il cognome dell'utente (FOR)
+
+for(i = 1 ; i < arrayCognomi.length ; i++ ) {
+    
+   
 }
